@@ -1,16 +1,16 @@
-# IWA - Input Weather A
-This is a Weather Sensor measuring Atmospheric **Temperature** and Relative **Humidity**
+# IWB - Input Weather B - Barometer
+This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **Pressure**
 | Specifications | |
 | --: | :--: |
 | Communication | I2C |
-| I2C Address | 0x44 |
-| ChipSet | SHT30-DIS|
-| Datasheet | [.pdf](https://sensirion.com/media/documents/213E6A3B/61641DC3/Sensirion_Humidity_Sensors_SHT3x_Datasheet_digital.pdf) |
-| Suggested Arduino Library | [GitHub](https://github.com/wemos/WEMOS_SHT3x_Arduino_Library) |
-| Temperature Accuracy | ±0.2 °C |
-| Temperature Range | -40 to 125 °C |
-| Humidity Accuracy | ± 2 %RH |
-| Humidity Range | 0 to 100 %RH |
+| I2C Address | 0x77 |
+| ChipSet | Goertek SPL06-001 |
+| Datasheet | [.pdf]() |
+| Suggested Arduino Library | [GitHub](https://github.com/rv701/SPL06-007) |
+| Temperature Accuracy | ± °C |
+| Temperature Range | °C |
+| Pressure Accuracy | ± |
+| Pressure Range | |
 
 ## Supported I2C Modes
 - [x] 100 kbit/s Standard Mode (SM) 
