@@ -1,9 +1,9 @@
-# IWB - Input Weather B - Barometer
+# IWB - Input Weather Barometer
 This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **Pressure**
 | Specifications | |
 | --: | :--: |
-| Communication | I2C |
-| I2C Address | 0x77 |
+| Communication | I²C |
+| I²C Address | 0x77 |
 | ChipSet | Goertek SPL06-001 |
 | Datasheet | [.pdf](https://datasheet.lcsc.com/szlcsc/2101201914_Goertek-SPL06-001_C2684428.pdf) |
 | Suggested Arduino Library | [GitHub](https://github.com/rv701/SPL06-007) |
@@ -12,7 +12,7 @@ This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **
 | Pressure Accuracy | ± 6 Pa |
 | Pressure Range | 300 to 1100 hPa|
 
-## Supported I2C Modes - Unknown
+## Supported I²C Modes - Unknown
 - [ ] 100 kbit/s Standard Mode (SM) 
 - [ ] 400 kbit/s	Fast Mode	FM
 - [ ] 1 Mbit/s	Fast Mode Plus	FM+
