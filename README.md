@@ -1,3 +1,5 @@
+<img src="assets/IWB.svg" width=200 align="right">
+
 # IWB - Input Weather Barometer
 This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **Pressure**
 | Specifications | |
