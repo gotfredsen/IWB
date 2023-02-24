@@ -26,10 +26,11 @@ This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **
 
 - Download the .zip file under the green `Code` button on the GitHub page
 - Install the .zip file using Arduino's install .zip library
-- Any other way, and you don't get the latest version!
-- Initialize the library using `SPL_init(0x77);`
 
 <img src="assets/Arduino install zip.png" width=400 align="right">
+
+- Any other way, and you don't get the latest version!
+- Initialize the library using `SPL_init(0x77);`
 
 # License: 
 <img src="assets/CC-BY-NC-SA.png" width=200 align="right">
