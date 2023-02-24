@@ -21,6 +21,12 @@ This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **
 - [ ] 3.4Mbit/s	High Speed Mode	HS
 - [ ] 5 Mbit/s	Ultra Fast Mode	UFM
 
+## Using the suggested library *https://github.com/rv701/SPL06-007* 
+- Download the .zip file under the green `Code` button on the GitHub page
+- Install the .zip file using Arduino's install .zip library
+- Any other way, and you don't get the latest version!
+- Initialize the library using `SPL_init(0x77);`
+
 # License: 
 <img src="assets/CC-BY-NC-SA.png" width=200 align="right">
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
