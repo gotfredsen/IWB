@@ -15,10 +15,10 @@ This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **
 | Pressure Range | 300 to 1100 hPa|
 
 ## Supported I²C Modes - Unknown
-- [ ] 100 kbit/s Standard Mode (SM) 
-- [ ] 400 kbit/s	Fast Mode	FM
-- [ ] 1 Mbit/s	Fast Mode Plus	FM+
-- [ ] 3.4Mbit/s	High Speed Mode	HS
+- [X] 100 kbit/s Standard Mode (SM) 
+- [X] 400 kbit/s	Fast Mode	FM
+- [X] 1 Mbit/s	Fast Mode Plus	FM+
+- [X] 3.4Mbit/s	High Speed Mode	HS
 - [ ] 5 Mbit/s	Ultra Fast Mode	UFM
 
 ## Using the suggested library *https://github.com/rv701/SPL06-007* 
