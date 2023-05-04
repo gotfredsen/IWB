@@ -9,6 +9,7 @@ This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **
 | ChipSet | Goertek SPL06-001 |
 | Datasheet | [.pdf](https://datasheet.lcsc.com/szlcsc/2101201914_Goertek-SPL06-001_C2684428.pdf) |
 | Suggested Arduino Library | [GitHub](https://github.com/rv701/SPL06-007) |
+|Suggested MicroPython Library|[GitHub](https://github.com/ChangboBro/SPL06-MEMS-barometer-micropython)|
 | Temperature Accuracy | ± 0.5 °C |
 | Temperature Range | -40 to +85°C |
 | Pressure Accuracy | ± 6 Pa |
