@@ -1,5 +1,9 @@
 <img src="assets/IWB.svg" width=200 align="right">
 
+[![PlatformIO](https://github.com/domino4com/IWB/actions/workflows/platformio.yml/badge.svg)](https://github.com/domino4com/IWB/actions/workflows/platformio.yml)
+[![Arduino](https://github.com/domino4com/IWB/actions/workflows/arduino.yml/badge.svg)](https://github.com/domino4com/IWB/actions/workflows/arduino.yml)
+
+
 # IWB - Input Weather Barometer
 This is a Weather Sensor measuring Atmospheric **Temperature** and Barometric **Pressure**
 | Specifications | |
