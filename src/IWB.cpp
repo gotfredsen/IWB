@@ -425,7 +425,7 @@ bool IWB::getJSON(JsonObject &doc) {
     dataSet["value"] = var1;
     dataSet["unit"] = "hPa";
 
-    dataArray.add(dataSet);  // Subsequent data sets
+    dataSet = dataArray.createNestedObject();  // Subsequent data sets
     dataSet["name"] = "Temperature";
     dataSet["value"] = var2;
     dataSet["unit"] = "ºC";
