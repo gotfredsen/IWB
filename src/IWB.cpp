@@ -10,15 +10,13 @@ IWB::IWB() {
 }
 
 bool IWB::begin() {
-    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X06, 0x03);  // Pressure 8x oversampling
-    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X07, 0X83);  // Temperature 8x oversampling
+    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X06, 0x03);    // Pressure 8x oversampling
+    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X07, 0X83);    // Temperature 8x oversampling
     i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X08, 0B0111);  // continuous temp and pressure measurement
-    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X09, 0X00);  // FIFO Pressure measurement
+    i2c_eeprom_write_uint8_t(SPL_CHIP_ADDRESS, 0X09, 0X00);    // FIFO Pressure measurement
 
     return true;
 }
-
-
 
 uint8_t get_spl_id() {
     return i2c_eeprom_read_uint8_t(SPL_CHIP_ADDRESS, 0x0D);
@@ -132,10 +130,6 @@ int32_t get_traw() {
 
     return tmp;
 }
-
-
-
-
 
 int32_t get_praw() {
     int32_t tmp;
@@ -329,8 +323,6 @@ double get_temp_f() {
     return (((double(c0) * 0.5f) + (double(c1) * traw_sc)) * 9 / 5) + 32;
 }
 
-
-
 double get_pressure_scale_factor() {
     double k;
 
@@ -403,7 +395,6 @@ double get_pressure() {
 }
 
 bool IWB::getData(double &var1, double &var2) {
-
     var1 = get_pcomp() / 100;  // convert to hPa
     int16_t c0 = get_c0();
     int16_t c1 = get_c1();
@@ -412,20 +403,20 @@ bool IWB::getData(double &var1, double &var2) {
     return true;  // Return true for successful read (add error handling if needed)
 }
 
-bool IWB::getJSON(JsonObject &doc) {
+bool IWB::getJSON(JsonDocument &doc) {
     double var1, var2;
     if (!getData(var1, var2)) {
         return false;
     }
 
-    JsonArray dataArray = doc.createNestedArray("IWB");
+    JsonArray dataArray = doc["IWB"].to<JsonArray>();
 
-    JsonObject dataSet = dataArray.createNestedObject();  // First data set
+    JsonObject dataSet = dataArray.add<JsonObject>();  // First data set
     dataSet["name"] = "Pressure";
     dataSet["value"] = var1;
     dataSet["unit"] = "hPa";
 
-    dataSet = dataArray.createNestedObject();  // Subsequent data sets
+    dataSet = dataArray.add<JsonObject>();  // Subsequent data sets
     dataSet["name"] = "Temperature";
     dataSet["value"] = var2;
     dataSet["unit"] = "ºC";

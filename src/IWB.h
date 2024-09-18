@@ -9,7 +9,7 @@ class IWB {
     IWB();
     bool begin();
     bool getData(double &var1, double &var2);
-    bool getJSON(JsonObject &doc);
+    bool getJSON(JsonDocument &doc);
 
    private:
 };
