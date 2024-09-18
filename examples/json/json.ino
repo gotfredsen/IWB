@@ -13,6 +13,7 @@ IWB input;
 void setup() {
     Serial.begin(115200);
     delay(1000);
+    while(!Serial);
     Serial.printf("\nIWB JSON Test\n");
 
     Wire.setPins(I2C_SDA, I2C_SCL);
@@ -22,7 +23,7 @@ void setup() {
         Serial.println("IWB initialized successfully.");
     } else {
         Serial.println("Failed to initialize IWB!");
-        exit(0);
+        while(1);
     }
 }
 
